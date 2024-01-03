@@ -1,0 +1,42 @@
+{
+    
+        "Routes": [
+            {
+                "DownstreamPathTemplate": "/api/v1/Loan/{id}",
+                "UpstreamPathTemplate": "/Loan/v1/{id}",
+                "DownstreamScheme": "http",
+                "DownstreamHostAndPorts": [
+                    {
+                        "Host": "localhost",
+                        "Port": 5070
+                    }
+                ],
+                "UpstreamHttpMethod": [ "Get" ]
+            },
+            {
+                "DownstreamPathTemplate": "/api/v2/Loan/{id}",
+                "UpstreamPathTemplate": "/Loan/v2/{id}",
+                "DownstreamScheme": "http",
+                "DownstreamHostAndPorts": [
+                    {
+                        "Host": "localhost",
+                        "Port": 5070
+                    }
+                ],
+                "UpstreamHttpMethod": [ "Get" ]
+            },
+           
+            {
+                "DownstreamPathTemplate": "/api/v1/Loan",
+                "UpstreamPathTemplate": "/v1/Loan",
+                "DownstreamScheme": "http",
+                "DownstreamHostAndPorts": [
+                    {
+                        "Host": "localhost",
+                        "Port": 5070
+                    }
+                ],
+                "UpstreamHttpMethod": [ "Post" ]
+            }
+        ]
+    }
